@@ -1,50 +1,40 @@
-# Soarroute Flight Delay Predictions
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://soarroute-flightdelay-predictions.streamlit.app/)
+# GENDER PREDICTION USING DENTAL MEASUREMENTS
 
-An Interactive Streamlit App Dashboard to analyze and predict the expected Flight Delays based on weather, airlines and flight origin-destination [Streamlit](https://www.streamlit.io) module to improve the travel experience. These models help stakeholders make data-driven decisions, like optimizing schedules or managing airport resources.
-You can try [here](https://soarroute-flightdelay-predictions.streamlit.app/).
-
-Data from the Bureau of Transportation Statistics (bts.gov) collected during 01 June 2024 to 30 June 2024, were analyzed to assess Flight Delay Predictions
-
+## Project Overview
+This project aims to predict gender based on dental measurements using machine learning techniques. The primary objective is to develop a robust model capable of accurately classifying gender by leveraging dental features, which may exhibit sexual dimorphism. The dataset, derived from dental records, includes various measurements such as tooth dimensions and jaw characteristics. By applying advanced classification algorithms, including Random Forest, Logistic Regression, Decision Trees, and XGBoost, the project seeks to identify the most effective model for gender prediction and evaluate its performance. The significance of this study lies in its potential to assist forensic dentistry and clinical applications by providing a non-invasive method for gender identification.
 
 ## Results:
-* Decision Tree and KNN models built, trained to predict flight delays
-* Neural Network to predict the Flight delay
+* XGBoost outperformed other models with an accuracy of 90.9% and ROC AUC of 0.91. Random Forest followed with 89.1% accuracy. Logistic Regression, while interpretable, lagged in performance. The models were effective at identifying both genders, with slightly higher recall for males in Random Forest and for females in Logistic Regression.
+* Key features contributing to prediction included intercanine distances and canine widths from both intraoral and cast measurements. Cross-validation further confirmed the robustness of the models with a mean accuracy of 79.6% for Random Forest.
 
-## Authors
-Neha Korrapati, Leela Josna Kona, Devangi Samal, Sammie Srabani
-
-## Objectives
-* Identify potential delay flights
-
-* Building a strategies to predict most common reason for delay 
+## Author
+Leela Josna Kona
 
 ## Dataset and model
-* Bureau of Transportation Statistics (bts.gov)
+Dentistry Dataset.csv
+A structured dataset with 1,100 records including:
+    •	Intercanine distance
+    •	Canine width
+    •	Canine index
+The target variable is Gender (Male/Female), which will be encoded numerically for modeling.
+    •	Target Variable: Gender (Male/Female)
+    •	Independent Variables:
+        o	Inter-canine distances (intraoral and casts)
+        o	Right and left canine casts
+        o	Other dental measurements
+    •	Additional Attributes: Sample ID, SL No., and Age
 
 ## Libraries Used
-* [Streamlit](https://www.streamlit.io)
-* [Plotly](https://plotly.com/): (`streamlit.plotly_chart`)
-* Keras and TensorFlow
-
-## Snapshots
-### 1. Landing Page
-![Home](https://github.com/jyothsnagrace/soarroute-flightdelay-predictions/blob/main/data/img/home_page.jpg)
-
-### 2. Exploratory Data Analysis
-![CH](https://github.com/jyothsnagrace/soarroute-flightdelay-predictions/blob/main/data/img/correlation_heatmap.jpg)
-![Top10](https://github.com/jyothsnagrace/soarroute-flightdelay-predictions/blob/main/data/img/top10_us_airports_avg_arr_delay.jpg)
-
-### 3. Flight Delay Predictions
-![DT](https://github.com/jyothsnagrace/soarroute-flightdelay-predictions/blob/main/data/img/decision_tree_report.jpg)
-![KNN](https://github.com/jyothsnagrace/soarroute-flightdelay-predictions/blob/main/data/img/knn_report.jpg)
-![pie](https://github.com/jyothsnagrace/soarroute-flightdelay-predictions/blob/main/data/img/delay_reasons_chart.jpg)
-![bar](https://github.com/jyothsnagrace/soarroute-flightdelay-predictions/blob/main/data/img/log_loss_comparision_chart.jpg)
-
-### 4. Delay Predictor
-![demo](https://github.com/jyothsnagrace/soarroute-flightdelay-predictions/blob/main/data/img/delay_predictor.jpg)
-![demo](https://github.com/jyothsnagrace/soarroute-flightdelay-predictions/blob/main/data/img/delay_predictor_demo.jpg)
+* Pandas, Numpy
+* Matplotlib, Seaborn
+*	Scikit-learn
+*	XGBoost
+* IDE: Jupyter Notebook
 
 ## Future work
-* Predict avg duration of delay – Regression
-* Suggest alternative flights
+Future directions include:
+*	Incorporating Radiographic Images: Add dental X-rays to leverage image-based features.
+*	Deep Learning Integration: Utilize Convolutional Neural Networks (CNNs) in TensorFlow for automatic feature extraction from images.
+*	Larger Dataset: Improve model generalizability by increasing sample size and diversity.
+*	Clinical Application: Build a tool for gender estimation in forensic or dental practice environments.
+
